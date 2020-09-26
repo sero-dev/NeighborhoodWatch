@@ -1,21 +1,20 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-// import FormControl from 'react-bootstrap/FormControl';
-// import Form from 'react-bootstrap/Form';
-// import Button from 'react-bootstrap/Button';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import SearchBar from './components/SearchBar/SearchBar';
+import ReportButton from './components/ReportButton/ReportButton';
+
 
 document.title = "Neighborhood Report";
 class App extends Component {
-  render(){  
+  render () { 
     return (
-      <Navbar bg="light">
-        <Navbar.Brand href="#home">Brand link</Navbar.Brand>
-      </Navbar>
-
+      <div>
+        <NavigationBar/>
+        <ReportButton/>
+        <SearchBar/>
+      </div>
     );
   }
 }
