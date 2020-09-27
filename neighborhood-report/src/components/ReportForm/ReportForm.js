@@ -30,7 +30,7 @@ class ReportForm extends React.Component {
                 </div>
                 <label>
                     Incident Type:
-                    <input type="text" placeholder="e.g. COVID-19" value={this.state.incident} onChange={this.handleChange} />
+                    <input type="text" placeholder="COVID-19 / Wildfire" value={this.state.incident} onChange={this.handleChange} />
                 </label>
                 <label>
                     State:
