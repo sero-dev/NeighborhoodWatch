@@ -26,7 +26,7 @@ class ReportForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    Report a new case. Thank you for keeping your neighbors and community informed!
+                    Report a COVID-19 / Wildfire case. Thank you for keeping your neighbors and community informed!
                 </div>
                 <label>
                     Incident Type:
