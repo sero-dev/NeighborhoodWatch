@@ -18,13 +18,7 @@ namespace NeighborhoodWatch.DAC.Context
 
         public virtual DbSet<Incident> Incident { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                throw new InvalidOperationException("Database context is not configured");
-            }
-        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,11 +26,15 @@ namespace NeighborhoodWatch.DAC.Context
             {
                 entity.ToTable("incident");
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedOnAdd();
+                entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Location).HasColumnName("location");
+                entity.Property(e => e.County)
+                    .IsRequired()
+                    .HasColumnName("county");
+
+                entity.Property(e => e.State)
+                    .IsRequired()
+                    .HasColumnName("state");
 
                 entity.Property(e => e.Type)
                     .IsRequired()
