@@ -15,8 +15,7 @@ Neighborhood Watch is a web application that allows users to view incidents in t
 ### Back-End
 | Name | Version | Use Case | 
 |------|---------| -------- |
-| .NET Core | 3.1 | Utilized .NET Core as our backserver to leverage EF Core for building easy to read/modify endpoints as well as to leverage SignalR to allow users to get real-time updates from other users without requesting additional information |
-
+| Django/Python | 3.1 | Our backend is in Python to support the generation of heat maps with Python libraries.
 ***
 ## [Contributers](#contributers)
 - [Sean Rodriguez](https://linkedin.com/in/sero-dev)
