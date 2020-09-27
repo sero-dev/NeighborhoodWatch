@@ -21,5 +21,5 @@ Neighborhood Watch is a web application that allows users to view incidents in t
 ## [Contributers](#contributers)
 - [Sean Rodriguez](https://linkedin.com/in/sero-dev)
 - [Anh Nguyen](https://www.linkedin.com/in/anh-nguyen-72214b149/) 
-- [Quan Nguyen]()
+- [Quan Nguyen](https://www.linkedin.com/in/quannguyen35/)
 - [Sacha Arthurs](https://www.linkedin.com/in/sacha-arthurs)
