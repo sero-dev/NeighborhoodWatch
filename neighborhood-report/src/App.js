@@ -5,10 +5,9 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import SearchBar from './components/SearchBar/SearchBar';
 import ReportButton from './components/ReportButton/ReportButton';
 
-
 document.title = "Neighborhood Report";
 class App extends Component {
-  render () { 
+  render () {
     return (
       <div>
         <NavigationBar/>
