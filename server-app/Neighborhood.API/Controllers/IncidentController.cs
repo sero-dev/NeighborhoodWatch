@@ -32,14 +32,15 @@ namespace Neighborhood.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(string type, double longitude, double latitude)
+        public IActionResult Add(string type, string county, string state)
         {
             try
             {
                 Incident newIncident = new Incident
                 {
                     Type = type,
-                    Location = new NpgsqlPoint(longitude, latitude)
+                    County = county,
+                    State = state
                 };
 
                 return _incidentRepository.Add(newIncident) ? Ok() : StatusCode(500);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using NpgsqlTypes;
 
 namespace NeighborhoodWatch.DAC.Entity
 {
@@ -8,6 +7,7 @@ namespace NeighborhoodWatch.DAC.Entity
     {
         public int Id { get; set; }
         public string Type { get; set; }
-        public NpgsqlPoint Location { get; set; }
+        public string County { get; set; }
+        public string State { get; set; }
     }
 }

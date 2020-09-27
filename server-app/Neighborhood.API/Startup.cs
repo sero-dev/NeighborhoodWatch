@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using NeighborhoodWatch.DAC;
 using NeighborhoodWatch.DAC.Context;
 using NeighborhoodWatch.DAC.Interface;
+using Npgsql;
+using System;
 
 namespace Neighborhood.API
 {
@@ -23,9 +25,20 @@ namespace Neighborhood.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IIncidentRepository, IncidentRepository>();
-            
+
+
+            var connectionString = new NpgsqlConnectionStringBuilder()
+            {
+                SslMode = SslMode.Disable,
+                Host = Environment.GetEnvironmentVariable("DB_HOST"),
+                Username = Environment.GetEnvironmentVariable("DB_USER"),
+                Password = Environment.GetEnvironmentVariable("DB_PASS"),
+                Database = Environment.GetEnvironmentVariable("DB_NAME"),
+                Pooling = true
+            };
+
             services.AddDbContext<IncidentContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("IncidentContext")));
+                options.UseNpgsql(connectionString.ConnectionString));
             
             services.AddControllers();
 

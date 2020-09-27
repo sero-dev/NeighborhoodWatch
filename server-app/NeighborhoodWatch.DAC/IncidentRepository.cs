@@ -1,11 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using NeighborhoodWatch.DAC.Context;
+﻿using NeighborhoodWatch.DAC.Context;
 using NeighborhoodWatch.DAC.Entity;
 using NeighborhoodWatch.DAC.Interface;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace NeighborhoodWatch.DAC
 {
