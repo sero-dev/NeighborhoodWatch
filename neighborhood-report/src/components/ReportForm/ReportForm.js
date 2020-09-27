@@ -3,12 +3,11 @@ import React from 'react';
 class ReportForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {state: '', county: ''};
+        this.state = {incident: '', state: '', county: ''};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
     handleChange(event) {
         this.setState({value: event.target.value});
     }
@@ -27,8 +26,12 @@ class ReportForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    Report a new COVID-19 case. Thank you for keeping your neighbors and community informed!
+                    Report a new case. Thank you for keeping your neighbors and community informed!
                 </div>
+                <label>
+                    Incident Type:
+                    <input type="text" placeholder="e.g. COVID-19" value={this.state.incident} onChange={this.handleChange} />
+                </label>
                 <label>
                     State:
                     <input type="text" placeholder="e.g. Florida" value={this.state.latitude} onChange={this.handleChange} />

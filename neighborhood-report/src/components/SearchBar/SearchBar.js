@@ -8,7 +8,9 @@ class SearchBar extends React.Component {
 				<div className='center'>
 					<div className='form center pa4 br3 shadow-3'>
 						<input className='f4 pa2 w-70 center' type='text' placeholder='Enter a U.S. County (e.g. Orange County)'/>
-						<button className='dim w-30 f4 link pv2 dib white bg-blue'>Search</button>
+						<button className='dim w-30 f4 link pv2 dib white bg-white'>
+							<a href='/map.html' target='_blank'>Search</a>
+						</button>
 					</div>
 				</div>
 			</article>
